@@ -42,9 +42,13 @@ const StudentHome = () => {
    
   };
 
+  const handleSignOut = () =>{
+    navigate(`/`)
+  }
   return (
     <>
     <h2>Chọn môn thi:</h2>
+    <button onClick={handleSignOut} style={{height:"32px", width: "120px", borderRadius:"10px",  position: "absolute", top:"20px" , right: "80px",height: "30px", margin: "5px"}}>Đăng Xuất</button>
     <div className="subject-container">
       {subjects.map((subject) => (
         <div key={subject.id} className="subject-item">
@@ -59,6 +63,7 @@ const StudentHome = () => {
       ))}
   
     </div>
+    
   </>
   );
 };

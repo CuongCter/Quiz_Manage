@@ -7,6 +7,7 @@ import "./pages/Button.css";
 import "./pages/AddQuestion.css";
 import { API } from "../const.api";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export default function AddExam() {
   const [newNameExam, setNewNameExam] = useState("");
@@ -61,10 +62,15 @@ export default function AddExam() {
     setNewNumNormal(0);
     setNewNumEasy(0);
     setNewTimeEnd("");
+  };const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1);
   };
-
   return (
     <div className="AddExam">
+      <button onClick={goBack} style={{borderRadius: "5px", padding: "5px 7px", backgroundColor: "yellow", margin: "5px"}}>
+        Back
+      </button>
       <div className="container">
         <form>
           <h3>THÊM ĐỀ THI</h3>

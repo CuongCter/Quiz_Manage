@@ -25,9 +25,14 @@ const Exam = () => {
     navigate(`/Test/${exam._id}`); // Chuyển hướng đến Exam với key của môn học
    
   };
-
+  const goBack = () => {
+    navigate(-1);
+  };
   return (
     <div>
+      <button onClick={goBack} style={{borderRadius: "5px", padding: "5px 7px", backgroundColor: "yellow", margin: "5px"}}>
+        Back
+      </button>
       <h2>Danh sách bài thi:</h2>
       <div className="table-container">
         <table>

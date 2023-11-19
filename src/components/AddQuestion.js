@@ -6,8 +6,11 @@ import "./pages/AddQuestion.css";
 import { API } from "../const.api";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export default function AddQuestion() {
+  const navigate = useNavigate();
+
   const defaultAnswers = [
     { id: 1, text: "", isCorrect: false },
     { id: 2, text: "", isCorrect: false },
@@ -75,10 +78,15 @@ export default function AddQuestion() {
       console.error("Error:", error);
     }
   };
-
+  const goBack = () => {
+    navigate(-1);
+  };
   return (
     <div className="AddQuestion">
-      <div className="container">
+       <button onClick={goBack} style={{borderRadius: "5px", padding: "5px 7px", backgroundColor: "yellow", margin: "5px"}}>
+        Back
+      </button>
+      <div className="containerss">
         <form>
           <h3>THÊM CÂU HỎI</h3>
 
