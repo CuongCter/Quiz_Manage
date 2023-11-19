@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { API } from "../const.api";
 import "./pages/Test.css";
@@ -75,15 +75,23 @@ const Test = () => {
           answer: selectedAnswers[questionId],
         })),
       });
+  
+      // Hiển thị toast và đợi 5 giây trước khi chuyển hướng
       toast.success(res.data.message);
-
-      // Reset the form
-      resetForm();
+      setTimeout(() => {
+        // Chuyển hướng về trang /StudentHome
+        navigate("/StudentHome");
+        // Reset the form
+        resetForm();
+      }, 5000);
     } catch (error) {
       console.error("Lỗi khi nộp bài:", error.message);
       toast.error("Có lỗi xảy ra khi nộp bài!");
     }
   };
+  
+  
+  
 
   const resetForm = () => {
     setCompleted(false);
@@ -96,6 +104,9 @@ const Test = () => {
     const seconds = timeInSeconds % 60;
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   };
+
+  const navigate = useNavigate();
+
 
   return (
     <div className="test">

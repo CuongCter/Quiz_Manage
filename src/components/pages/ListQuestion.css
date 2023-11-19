@@ -8,8 +8,10 @@
   }
   
   .styled-table th, .styled-table td {
-    padding: 12px 15px;
+    padding: 12px 5px;
+    text-align: center;
     border-bottom: 1px solid #ddd;
+    
   }
   
   .styled-table th {
@@ -22,10 +24,12 @@
   }
   
   .styled-table td {
-    max-width: 200px;
+    max-width: 250px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word
   }
   
   /* styles for tablets */

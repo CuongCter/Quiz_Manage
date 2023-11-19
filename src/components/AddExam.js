@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { db } from "./data/firebbase-config";
 import { collection, addDoc } from "@firebase/firestore";
-import axios from 'axios';
-import DatePicker from 'react-datepicker';
+import axios from "axios";
+import DatePicker from "react-datepicker";
 import "./pages/Button.css";
 import "./pages/AddQuestion.css";
 import { API } from "../const.api";
@@ -39,23 +39,28 @@ export default function AddExam() {
       });
 
       toast.success("Thêm đề thi thành công");
-      console.log('Đã thêm đề thi thành công:', response.data);
+      console.log("Đã thêm đề thi thành công:", response.data);
 
-      // Xoá form hoặc thực hiện các hành động cần thiết khác sau khi thêm đề thi
-      setNewNameExam('');
-      setNewDateExam('');
-      setNewTimeStart(new Date());
-      setNewNumQuestions(0);
-      setNewSubjectID('');
-      setNewNumDifficult(0);
-      setNewNumNormal(0);
-      setNewNumEasy(0);
-      setNewTimeEnd('');
-
+      // Đặt lại giá trị các trường về giá trị ban đầu sau khi thêm đề thi thành công
+      resetForm();
     } catch (error) {
-      toast.error("Lỗi khi thêm đề thi");
-      console.error('Lỗi khi thêm đề thi:', error.message);
+      toast.error(error.response.data.message);
+      console.log(error);
+      // console.error('Lỗi khi thêm đề thi:', error.message);
     }
+  };
+
+  // Hàm để đặt lại giá trị các trường về giá trị ban đầu
+  const resetForm = () => {
+    setNewNameExam("");
+    setNewDateExam("");
+    setNewTimeStart(new Date());
+    setNewNumQuestions(0);
+    setNewSubjectID("");
+    setNewNumDifficult(0);
+    setNewNumNormal(0);
+    setNewNumEasy(0);
+    setNewTimeEnd("");
   };
 
   return (
@@ -66,11 +71,15 @@ export default function AddExam() {
           <h2>Tên đề thi:</h2>
           <input
             placeholder="Question"
+            value={newNameExam}
             onChange={(event) => setNewNameExam(event.target.value)}
           />
 
           <h2>Chọn ngày thi: {newDateExam}</h2>
-          <input type="date" onChange={(event) => setNewDateExam(event.target.value)} />
+          <input
+            type="date"
+            onChange={(event) => setNewDateExam(event.target.value)}
+          />
 
           <h2>Thời gian:</h2>
           <div className="datepicker-container">
@@ -89,6 +98,7 @@ export default function AddExam() {
               <input
                 type="text"
                 placeholder="Nhập thời lượng"
+                value={newTimeEnd}
                 onChange={(event) => setNewTimeEnd(event.target.value)}
               />
             </div>
@@ -98,6 +108,7 @@ export default function AddExam() {
           <input
             type="number"
             placeholder="Nhập..."
+            value={newNumQuestions}
             onChange={(event) => setNewNumQuestions(Number(event.target.value))}
           />
           <select value={newSubjectID} onChange={handleSelectChangeSubject}>
@@ -113,18 +124,21 @@ export default function AddExam() {
           <input
             type="number"
             placeholder="Nhập..."
+            value={newNumEasy}
             onChange={(event) => setNewNumEasy(Number(event.target.value))}
           />
           <h2>Số câu bình thường:</h2>
           <input
             type="number"
             placeholder="Nhập..."
+            value={newNumNormal}
             onChange={(event) => setNewNumNormal(Number(event.target.value))}
           />
           <h2>Số câu khó:</h2>
           <input
             type="number"
             placeholder="Nhập..."
+            value={newNumDifficult}
             onChange={(event) => setNewNumDifficult(Number(event.target.value))}
           />
 

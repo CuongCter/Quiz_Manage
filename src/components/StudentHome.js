@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./pages/StudentHome.css";
-import axios from "axios";
-import { API } from "../const.api";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const StudentHome = () => {
   const subjects = [
     {
@@ -53,7 +51,7 @@ const StudentHome = () => {
           <img
             src={subject.img}
             alt={subject.name}
-            className="subject-image"
+            className="choonse-image"
             onClick={() => handleSubjectClick(subject)}
           />
           <p className="subject-name">{subject.name}</p>

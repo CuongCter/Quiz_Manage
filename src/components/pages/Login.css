@@ -3,7 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.containerLogin{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .container_login {
     width: 100%;
     height: 100vh;

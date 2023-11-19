@@ -62,9 +62,22 @@ export default function ListExam() {
       // ...
     }
   };
-
+  const goBack = () => {
+    navigate(-1);
+  };
   return (
     <div className="ListQuestion">
+      <button
+        onClick={goBack}
+        style={{
+          borderRadius: "5px",
+          padding: "5px 7px",
+          backgroundColor: "yellow",
+          margin: "5px",
+        }}
+      >
+        Back
+      </button>
       <table className="styled-table">
         <thead>
           <tr>

@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 
 export default function HomePage() {
   return (
-    <div className="AddQuestion">
-      <div className="container">
+    <div >
+      <div className="containerLogin">
         <form>
           <h3>HOME PAGE</h3>
-
           <div className="button-container">
             <div className="buttons">
               <Link to="/LoginStudent" className="blob-btn">
