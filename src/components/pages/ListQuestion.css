@@ -1,0 +1,135 @@
+/* styles for desktop */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .styled-table th, .styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .styled-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .styled-table tbody tr:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+  }
+  
+  .styled-table td {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* styles for tablets */
+  @media (max-width: 768px) {
+    .styled-table th, .styled-table td {
+      padding: 10px;
+    }
+  
+    .styled-table td {
+      max-width: 150px;
+    }
+  }
+  
+  /* styles for mobile */
+  @media (max-width: 480px) {
+    .styled-table th, .styled-table td {
+      padding: 8px;
+    }
+  
+    .styled-table td {
+      max-width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  /* Thêm styles cho nút Xóa */
+.styled-table button {
+    background-color: #ff5555;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .styled-table button:hover {
+    background-color: #cc0000;
+  }
+  .confirm-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .confirm-popup p {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  .confirm-popup button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .confirm-popup button:hover {
+    background-color: #c0392b;
+  }
+  
+  .confirm-popup .cancel-button {
+    background-color: #3498db;
+    margin-left: 10px;
+  }
+  
+  .confirm-popup .cancel-button:hover {
+    background-color: #2980b9;
+  }
+  .delete-confirmation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    text-align: center;
+  }
+  
+  .delete-confirmation p {
+    margin-bottom: 20px;
+  }
+  
+  .delete-confirmation button {
+    margin-right: 10px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .delete-confirmation button:last-child {
+    margin-right: 0;
+  }
+  

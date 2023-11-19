@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 320px;
+    margin-bottom: 300px;
+}
+
+form {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+form h2 {
+    color: #1f1f1f;
+    margin-top: 20px;
+    display: flex;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+form h3 {
+    color: #000000;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+form select {
+    border-radius: 5px;
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 16px;
+}
+
+.input-group-text {
+    border: 0;
+    margin: 10px 0;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #ffffff;
+    font-size: 16px;
+}
+
+.mr-2 {
+    margin-right: 10px;
+}
+
+/* Định dạng chung cho DatePicker */
+.react-datepicker-wrapper {
+    display: inline-block;
+  }
+  
+  .react-datepicker {
+    font-family: Arial, sans-serif;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .react-datepicker--time-only .react-datepicker__input-container {
+    width: 72px;
+  }
+  
+  /* Định dạng cho input */
+  .react-datepicker__input-container input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  /* Chỉnh lại dropdown */
+  .react-datepicker__triangle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+    margin-bottom: -5px;
+  }
+  
+  .react-datepicker__triangle:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #cccccc;
+  }
+  
+  /* Định dạng cho time picker */
+  .react-datepicker__input-time-container {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .react-datepicker__time-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .react-datepicker__time-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 200px;
+    width: 150px;
+  }
+  
+  .react-datepicker__time-list-item {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #ffffff;
+  }
+  
+  .react-datepicker__time-list-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .react-datepicker__time-list-item--selected {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  .react-datepicker__time-list-item--selected:hover {
+    background-color: #0056b3;
+  }
+  
+  .react-datepicker__time-container--with-today-button .react-datepicker__time-list {
+    padding-bottom: 40px;
+  }
+  
+  .react-datepicker__time-container .react-datepicker__time-list-item--disabled {
+    height: 200px;
+    width: 150px;
+    color: #cccccc;
+  }
+  .datepicker-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .datepicker-wrapper {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 0 10px;
+  }
+  
+  

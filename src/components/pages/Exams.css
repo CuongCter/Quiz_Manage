@@ -1,0 +1,73 @@
+.subject-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .subject-item {
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .subject-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .subject-name {
+    margin-top: 10px;
+  }
+  
+  .subject-item:hover .subject-image {
+    transform: scale(1.1);
+  }
+  
+  .exam-list-container {
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  /* Exams.css */
+/* Exams.css */
+.table-container {
+    margin: 0 auto; /* Căn giữa theo chiều ngang */
+    width: 80%; /* Điều chỉnh độ rộng của table */
+  }
+  
+  /* Thêm CSS cho các thành phần trong ô */
+  .table-container table {
+    width: 100%;
+    border-collapse: collapse; /* Loại bỏ khoảng cách giữa các ô */
+  }
+  
+  .table-container th,
+  .table-container td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Thêm CSS để làm cho các dòng trong bảng trở nên tương tác khi hover */
+  .table-container table tbody tr:hover {
+    cursor: pointer;
+    background-color: #f5f5f5; /* Màu nền khi hover */
+  }
+  
+  
+  

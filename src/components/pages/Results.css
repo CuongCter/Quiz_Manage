@@ -1,0 +1,55 @@
+.results-container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+    width: 100%;
+  }
+  
+  .results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: fixed; /* Không cho bảng tự động điều chỉnh kích thước cột */
+  }
+  
+  .results-table th, .results-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap; /* Ngăn chặn trường văn bản quá lớn từ việc xuống dòng */
+    overflow: hidden; /* Ẩn phần văn bản bị ẩn đi */
+    text-overflow: ellipsis; /* Hiển thị dấu ba chấm (...) cho văn bản bị ẩn */
+  }
+  
+  .results-table th {
+    background-color: #f2f2f2;
+  }
+  
+  @media (max-width: 600px) {
+    .results-table {
+      display: block;
+      overflow-x: auto;
+    }
+  
+    .results-table thead {
+      display: none;
+    }
+  
+    .results-table tbody, .results-table tr, .results-table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .results-table td {
+      text-align: center;
+      padding: 8px;
+      margin-bottom: 5px;
+    }
+  }
+  
